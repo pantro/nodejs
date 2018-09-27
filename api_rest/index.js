@@ -4,6 +4,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
+const Product = require('./models/product')
+
 const app = express()
 const port = process.env.PORT || 3001
 
@@ -29,8 +31,22 @@ app.get('/api/product/:productId', (req, res) =>{
 })
 //Para subir nuevos productos
 app.post('/api/product', (req, res) =>{
+	console.log('POST /api/product')
 	console.log(req.body)
-	res.status(200).send({message: 'El producto fue recibido'})
+
+	let product = new Product()
+	product.name = req.body.name
+	product.picture = req.body.picture
+	product.price = req.body.price
+	product.category = req.body.category//Solo recibe categorias definidas
+	product.description = req.body.description
+
+	//Guardar en mongodb
+	product.save((err, productStored) => {
+		if (err) res.status(500).send({ message: `Error al salvar los datos: ${err}`})
+
+		res.status(200).send({product: productStored})
+	})
 })
 //Para actualizaciones
 app.put('/api/product/:productId', (req, res) =>{
