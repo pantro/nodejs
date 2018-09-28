@@ -19,7 +19,8 @@ COMANDOS IMPORTANTES
 - npm i -S mongoose (para utilizar mongodb)
 - npm i -S bcrypt-nodejs (encriptar contraseñas)
 - npm i -S crypto (para obtener avatares)
-
+- npm i -S jwt-simple
+- npm i -S moment (ayuda con el manejo de fechas)
 
 
 
