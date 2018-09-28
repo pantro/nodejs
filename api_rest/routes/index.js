@@ -16,7 +16,7 @@ api.put('/product/:productId', ProductCtrl.updateProduct)
 //Para eliminar
 api.delete('/product/:productId', ProductCtrl.deleteProduct)
 
-api.get('/private', auth.isAuth, function (req, res) {
+api.get('/private', auth, function (req, res) {
 	res.status(200).send({ message: 'Tienes acceso' })
 })
 
