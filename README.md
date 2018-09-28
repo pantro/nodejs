@@ -1,5 +1,5 @@
-# nodejs
-Ejercicios con nodejs
+# NODEJS
+Aqui estan almacenados todos los ejercicios que he realizado con nodejs.
 
 NOTA: HTTP/1.1 (RFC 2616)
 - GET: Obtener informacion del servidor
@@ -17,6 +17,8 @@ COMANDOS IMPORTANTES
 - npm i -S body-parser (libreria que permite parsear los datos cuando de hagan peticiones res)
 - npm i -D nodemon (Nos permite actualizar nuestro servidor con cada cambio)
 - npm i -S mongoose (para utilizar mongodb)
+- npm i -S bcrypt-nodejs (encriptar contraseñas)
+- npm i -S crypto (para obtener avatares)
 
 
 
