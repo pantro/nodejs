@@ -12,7 +12,7 @@ NOTA: HTTP/1.1 (RFC 2616)
 - 5xxx: error del servidor, el cliente no hizo nada mal la culpa lo tiene el servidor.
 
 COMANDOS IMPORTANTES
-- npm init (iniciar un proyecto)
+- npm init -yes (iniciar un proyecto)
 - npm install express --save / npm i express -S
 - npm i -S body-parser (libreria que permite parsear los datos cuando de hagan peticiones res)
 - npm i -D nodemon (Nos permite actualizar nuestro servidor con cada cambio)
