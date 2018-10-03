@@ -19,7 +19,7 @@ api.delete('/product/:productId',auth, ProductCtrl.deleteProduct)
 
 //Login
 api.post('/signup', userCtrl.signUp)
-api.post('/signip', userCtrl.signIn)
+api.post('/signin', userCtrl.signIn)
 
 api.get('/private', auth, function (req, res) {
 	res.status(200).send({ message: 'Tienes acceso' })
