@@ -15,6 +15,7 @@ function signUp (req, res) {
 
 		return res.status(201).send({ token: service.createToken(user) })
 	})
+	
 }
 
 function signIn (req, res) {

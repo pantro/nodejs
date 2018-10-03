@@ -17,7 +17,7 @@ const UserSchema = new Schema({
 /*
 *Mongoose nos brinda funciones que podemos utilizar antes o despues de guardar los datos
 */
-UserSchema.pre('save', (next) => {
+UserSchema.pre('save', function (next) {
 	let user = this
 	if (!user.isModified('password')) return next()
 
