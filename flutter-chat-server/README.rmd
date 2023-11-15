@@ -1,0 +1,14 @@
+# Chat Flutter con socket
+
+## File .env
+PORT=?????
+DB_CONECTION=?????
+JWT_KEY=?????
+
+## Empezar proyecto
+- npm install
+- npm run start:dev
+
+
+## Commit
+- "FLUTTER-CHAT-SERVER: validaciones, creacion de token"
