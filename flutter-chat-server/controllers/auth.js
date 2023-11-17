@@ -13,7 +13,7 @@ const crearUsuario = async ( req, res = response) => {
         if (existeEmail) {
             return res.status(400).json({
                 ok: false,
-                msg: 'La credencial no es valida'
+                msg: 'Email ya existe'
             })
         }
 
@@ -71,7 +71,7 @@ const login = async (req, res = response) => {
 
         res.json({
             ok: true,
-            ususario: usuarioDB,
+            usuario: usuarioDB,
             token
         })
     

@@ -12,3 +12,4 @@ JWT_KEY=?????
 
 ## Commit
 - "FLUTTER-CHAT-SERVER: validaciones, creacion de token"
+- "FLUTTER-CHAT-SERVER: V1.0 hasta aqui puede ser utilizado para otras app, todo es algo generico"
