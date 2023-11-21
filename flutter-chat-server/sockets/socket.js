@@ -1,6 +1,6 @@
 const { comprobarJWT } = require('../helpers/jwt');
 const { io } = require('../index');
-const { usuarioConectado, usuarioDesconectado} = require('../controllers/socketController')
+const { usuarioConectado, usuarioDesconectado, grabarMensaje} = require('../controllers/socketController')
 
 // Mensajes de Sockets
 io.on('connection', (client) => {
@@ -14,6 +14,17 @@ io.on('connection', (client) => {
 
     // Verificar autenticacion
     usuarioConectado(uid);
+
+    // INgresar al usuario a una sala en particular
+    // Hay 3 tipos de salas: sala global, client.id, sala que vamos agenerar con el UID del usuario
+    client.join( uid );// Generando la sala con el UID
+
+    // Escuchar del cliente el mensaje personal
+    client.on('mensaje-personal', async ( payload ) => {
+        console.log(payload);
+        await grabarMensaje( payload );
+        io.to( payload.para ).emit('mensaje-personal', payload);// Renviandolo solo a la personal de determinado UID
+    });
 
     client.on('disconnect', () => {
         usuarioDesconectado(uid);

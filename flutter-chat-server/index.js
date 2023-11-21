@@ -27,6 +27,7 @@ app.use( express.static( publicPath ) );
 // Mis rutas
 app.use('/api/login', require('./routes/authRoute'));
 app.use('/api/usuarios', require('./routes/usuariosRoute'));
+app.use('/api/mensajes', require('./routes/mensajesRoute'));
 
 
 

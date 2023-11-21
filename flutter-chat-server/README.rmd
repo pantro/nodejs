@@ -15,3 +15,4 @@ JWT_KEY=?????
 - "FLUTTER-CHAT-SERVER: V1.0 hasta aqui puede ser utilizado para otras app, todo es algo generico"
 - "FLUTTER-CHAT-SERVER: login"
 - "FLUTTER-CHAT-SERVER: listado de usuarios menos el que consulto"
+- "FLUTTER-CHAT-SERVER (FIN): Crear salas de chat y guardar mensajes en base de datos"
